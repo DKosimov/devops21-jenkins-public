@@ -9,11 +9,9 @@ pipeline {
 
         stage ('CreateEnv') {
             steps {
-                script {
+                sh '''#!/bin/bash
                     sh "chmod +x -R ${env.WORKSPACE}/../${env.JOB_NAME}/myec2.sh"
-                }
             }
         }
     }
-
 }
